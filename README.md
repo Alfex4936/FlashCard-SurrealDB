@@ -71,6 +71,16 @@ FLYIO_HOST=your.fly.dev
 cargo run
 ```
 
+## Docker
+
+Can run it in Docker ~100MB image.
+
+```bash
+docker build -t flashcard-master --no-cache .
+
+docker run -it --rm --env-file .env flashcard-master list
+```
+
 ## Usage
 
 1. Add a flashcard:

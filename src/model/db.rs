@@ -1,6 +1,5 @@
 // src/model/db.rs
 use crate::model::card::Card;
-use dotenv::dotenv;
 use std::env;
 use surrealdb::engine::remote::ws::Client;
 use surrealdb::engine::remote::ws::Wss;
@@ -14,7 +13,6 @@ use rand::Rng;
 use serde_json::Value;
 
 pub async fn init_db_client() -> DbResult<Surreal<Client>> {
-    dotenv().ok();
     let host = env::var("FLYIO_HOST").expect("FLYIO_HOST must be set");
     let user = env::var("SURREALDB_DB_USER").expect("SURREALDB_DB_USER must be set");
     let pw = env::var("SURREALDB_DB_PW").expect("SURREALDB_DB_PW must be set");

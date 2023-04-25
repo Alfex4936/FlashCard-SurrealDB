@@ -11,6 +11,7 @@ use crate::commands::{
 use crate::model::db::init_db_client;
 
 use clap::Parser;
+use dotenv::dotenv;
 use std::sync::Arc;
 use tokio;
 
@@ -49,6 +50,8 @@ enum Command {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    dotenv().ok();
+
     let opts: Opts = Opts::parse();
 
     let client = Arc::new(init_db_client().await?);
