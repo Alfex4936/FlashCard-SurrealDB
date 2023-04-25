@@ -1,4 +1,4 @@
-# Flashcard Master
+# Flashcard Master <img src="https://user-images.githubusercontent.com/2356749/234233512-7a3ecf91-3c70-4e2e-b83f-5571e63cabb3.png" style="height: 32px"></img>
 
 ### Clap-rs + SurrealDB-rs + tokio's async
 
